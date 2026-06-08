@@ -1,35 +1,70 @@
 <!DOCTYPE html>
-<button onclick="onClockClick()">Clock</button>
-<button onclick="onStopwatchClick()"">Stopwatch</button>
-<button onclick="onTimerClick()">Timer</button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #1a1a34;">
+
+<div id="navbar">
+    <button onclick="onClockClick()">Clock</button>
+    <button onclick="onStopwatchClick()"">Stopwatch</button>
+    <button onclick="onTimerClick()">Timer</button>
+</div>
+
+<audio id="timer_sound" src="alarm.mp3" preload="auto"></audio>
+
+
+
 
 <div id = "clock_contents" style="display:none">
     <h1>Clock</h1>
     <br>
-    <label id = "lbl_clock">loading...</div>
+    <label id = "lbl_clock" class="display_text">clock time</label>
+    <br>
+    <label id = "lbl_date">date</label>
 </div>
 
 <div id = "stopwatch_contents" style="display:none">
     <h1>Stopwatch</h1>
-    <p id = "stopwatch_time">00:00:00:00</p>
+    <label id="lbl_stopwatch" class="display_text">00:00:00.00</label>
+    <br>
 
-    <button>Reset</button>
-    <button>Start</button>
-    <button>Stop</button>
+    <div class="stopwatch_buttons">
+    <button onclick="stopwatchTimerReset()" id="stopwatch_reset">Reset</button>
+    <button onclick="stopwatchTimerStart()" id="stopwatch_start">Start</button>
+    <button onclick="stopwatchTimerStop()" id="stopwatch_stop">Stop</button>
+    </div>
+
     <div>
     </div>
 
-
+    <p> Click Start to start counting the time </p>
 </div>
 
-<div id = "timer_contents" style="display:none">
+<div id="timer_contents" style="display:none">
     <h1>Timer</h1>
-    <p>will add timer functionalty here</p>
+    <p>Format is Hours : Minutes : Seconds</p>
+    
+    <!-- Grouped inputs and button together for centering -->
+    <div class="timer_inputs_wrapper">
+        <input type="number" id="timerHours" min="0" max="1000" value="0">
+        <input type="number" id="timerMinutes" min="0" max="59" value="0">
+        <input type="number" id="timerSeconds" min="0" max="59" value="0">
+        <button onclick="onTimerStart()" id="timer_start_btn">Start</button>
+    </div>
+    
+    <br>
+    <progress id="timer_progress" max="100" value="100">100%</progress>
 </div>
 
 <div id = "welcome">
-    <h1>Welcome</h1>
+    <h1>Welcome to Clock App</h1>
     <p>This is a clock app created using HTML and Javascript. To get started, click one of the buttons along the top.</p>
 </div>
 
-<script src = "./scripts/script.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://googleapis.com');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+button {
+    padding: 10px 20px;
+    border: 2px solid rgba(173, 150, 255, 0.462);
+    margin: 5px;
+    background-color: #1E1E2E;
+    color:#ffffff;
+    font-size: 15px;
+    box-shadow: #5042d0;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    
+
+}
+
+button:hover {
+    color:black;
+    border-radius: 90px;
+    background-color: hsl(245, 100%, 86%);
+    transform:scale(1.2)
+}
+
+#navbar {
+    background: #3c319d;
+    padding: 5px;
+
+}
+
+
+#stopwatch_reset {
+    padding: 10px 20px;
+    border: 2px solid aqua;
+    margin: 5px;
+    background-color: #0d3e42;
+    color:#ffffff;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    
+
+}
+
+#stopwatch_reset:hover {
+    color:black;
+    border-radius: 90px;
+    background-color: aqua;
+    transform:scale(1.2)
+}
+
+#stopwatch_start:hover {
+    color:black;
+    border-radius: 90px;
+    background-color: limegreen;
+    transform:scale(1.2)
+}
+
+#stopwatch_start {
+    padding: 10px 20px;
+    border: 2px solid limegreen;
+    margin: 5px;
+    background-color: #074c12;
+    color:#ffffff;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    
+
+}
+
+#stopwatch_stop {
+    padding: 10px 20px;
+    border: 2px solid rgb(202, 39, 18);
+    margin: 5px;
+    background-color: #591612;
+    color:#ffffff;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    
+
+}
+
+#stopwatch_stop:hover {
+    color:black;
+    border-radius: 90px;
+    background-color: orangered;
+    transform:scale(1.2)
+}
+
+.stopwatch_buttons {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.display_text {
+    display: flex;
+    font-family: 'JetBrains Mono', monospace;
+    justify-content: center;
+    align-items: center;
+    color:rgb(189, 149, 255);
+    font-size: 200px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+#timer_progress {
+    width: 85%;
+    max-width: 999px;
+    height: 35px;
+    margin: 40px auto 20px auto;
+    display: block;
+    appearance: none;
+    border: 3px solid #a197ff;
+    -webkit-appearance: none;
+
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(60, 49, 157, 0.4);
+}
+
+#timer_progress::-webkit-progress-bar {
+    background-color: #1E1E2E;
+    border-radius: 50px;
+}
+
+#timer_progress::-webkit-progress-value {
+    background-color: #5042d0;
+    border-radius: 50px;
+}
+
+#timer_progress::-moz-progress-bar {
+    background-color: #5042d0;
+    border-radius: 50px;
+}
+
+h1 {
+    color:#a197ff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 300%;
+    padding:15px;
+}
+
+p {
+    color:#6c63bd;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 120%;
+    padding:15px
+}
+
+#lbl_date {
+    color:#6c63bd;
+    font-family: 'monospace', Courier, monospace;
+    font-size: 350%;
+    padding: 25px;
+    border-color:#6c63bd;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+input[type="number"] {
+  padding: 12px 16px;      
+  font-size: 20px;
+  margin: 8px 0;
+  background-color: #2c2485d2;
+  border: 1px solid #262298;
+  border-radius: 6px;
+  color: #c3bdff;
+  text-align: center;
+  font-family: 'monospace', Courier, monospace;
+}
+
+.timer_inputs_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+    margin: 20px auto;
+    width: 100%;
+    
+    
+    
+}
